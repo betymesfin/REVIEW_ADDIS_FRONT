@@ -55,7 +55,7 @@ const EditReview = () => {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify(updatedData),
+        body: JSON.stringify(payload),
       });
       console.log("Updating with data:", updatedData);
 

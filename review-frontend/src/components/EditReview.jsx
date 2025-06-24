@@ -43,6 +43,12 @@ const EditReview = () => {
 
   const handleUpdate = async (updatedData) => {
     try {
+      const payload = {
+        comment: updatedData.comment,
+        type: updatedData.type,
+        rating: Number(updatedData.rate),
+        restaurant: updatedData.restaurant,
+      };
       const res = await fetch(`${import.meta.env.VITE_API_URL}/review/${id}`, {
         method: "PATCH",
         headers: {

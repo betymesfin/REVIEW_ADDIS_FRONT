@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../components/context/AuthProvider";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menu, setMenu] = useState(false);
+  const { isAuthenticated, logout } = useContext(AuthContext);
 
   return (
     <nav className="navbar">
@@ -11,22 +13,45 @@ const Navbar = () => {
         <Link to="/">Review Addis</Link>
       </div>
 
-      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+      <div className="menu-icon" onClick={() => setMenu(!menu)}>
         ☰
       </div>
-
-      <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
-        <li>
-          <Link to="/login" onClick={() => setMenuOpen(false)}>
-            Login
-          </Link>
-        </li>
-        <li>
-          <Link to="/register" onClick={() => setMenuOpen(false)}>
-            Sign Up
-          </Link>
-        </li>
-      </ul>
+      <div className="d-flex ms-3">
+        {isAuthenticated ? (
+          <button
+            className="l-btn"
+            onClick={() => {
+              logout();
+              setMenu(false);
+            }}
+          >
+            Logout
+          </button>
+        ) : (
+          <>
+            <ul className={`navbar-links ${menu ? "active" : ""}`}>
+              <li>
+                <Link
+                  className="btn"
+                  to="/login"
+                  onClick={() => setMenu(false)}
+                >
+                  Login
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="btn"
+                  to="/signup"
+                  onClick={() => setMenu(false)}
+                >
+                  Sign Up
+                </Link>
+              </li>
+            </ul>
+          </>
+        )}
+      </div>
     </nav>
   );
 };

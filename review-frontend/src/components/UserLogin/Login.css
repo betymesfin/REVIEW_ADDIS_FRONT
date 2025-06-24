@@ -1,0 +1,137 @@
+.login-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+}
+
+.form-title {
+	color: #2e2e2e;
+}
+
+.login-container {
+	width: 300px;
+	padding: 40px;
+	border: none;
+	background: linear-gradient(135deg, #73c7eb47, #012c324b);
+	border-radius: 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+	color: #d9534f;
+	font-size: 14px;
+}
+
+.input {
+	width: 100%;
+	padding: 0.6rem;
+	margin: 10px 0;
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+	color: #333;
+	background: #f8f8fc;
+	box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1),
+		inset -3px -3px 6px rgba(255, 255, 255, 0.5);
+	transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.input:focus {
+	background: #ffffff;
+	box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+	outline: none;
+}
+.link-text {
+	display: block;
+	text-align: center;
+	margin-top: 1rem;
+	font-size: 1rem;
+	cursor: pointer;
+	text-decoration: none;
+	transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.link-text:hover {
+	text-decoration: underline;
+}
+
+.button {
+	width: 100%;
+	padding: 0.7rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #ffffff;
+	background: linear-gradient(135deg, #20455447, #0312144b);
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.button:hover {
+	color:#2e2e2e; ;
+	background: linear-gradient(135deg, #20455447, #0312144b);
+	transform: translateY(-3px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.password-container {
+	margin-bottom: 10px;
+}
+
+.password-input-wrapper {
+	position: relative;
+	width: 100%;
+}
+
+.password-input-wrapper input {
+	width: 100%;
+	padding-right: 30px;
+}
+
+.password-toggle {
+	position: absolute;
+	top: 50%;
+	right: 8px;
+	transform: translateY(-50%);
+	border: none;
+	background: none;
+	cursor: pointer;
+	font-size: 14px;
+	color: #666;
+	padding: 2px;
+	height: 24px;
+	width: 24px;
+	line-height: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.password-toggle:hover {
+	color: #333;
+}
+
+@media (max-width: 480px) {
+	.login-wrapper {
+		padding: 0 10px;
+	}
+
+	.login-container {
+		width: 100%;
+		max-width: 350px;
+		padding: 20px;
+	}
+
+	.input {
+		padding: 0.5rem;
+		font-size: 0.9rem;
+	}
+
+	.button {
+		padding: 0.6rem;
+		font-size: 0.9rem;
+	}
+}

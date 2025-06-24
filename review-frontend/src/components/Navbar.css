@@ -38,7 +38,46 @@
 .navbar-links a:hover {
     color: #38bdf8;
 }
+.btn {
+    background: linear-gradient(135deg, #10f3f3, #0beaea);
+    color: #2e2e2e;
+    padding: 0.75em 1.563em;
 
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1) rotate(-1deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: all 200ms ease-in-out
+}
+.l-btn {
+    background: linear-gradient(135deg, #fcfefe, #f2f4f4);
+    color: #2e2e2e;
+    padding: 0.75em 1.563em;
+
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.l-btn:hover {
+    transform: scale(1.1) rotate(-1deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: all 200ms ease-in-out
+}
 /* Responsive styles */
 @media (max-width: 768px) {
     .menu-icon {
@@ -51,7 +90,7 @@
         top: 100%;
         right: 0;
         background-color: #1f2937;
-        width: 100%;
+        width: 25%;
         display: none;
         padding: 1rem;
     }

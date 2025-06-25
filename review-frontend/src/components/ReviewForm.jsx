@@ -69,12 +69,13 @@ function ReviewForm({ onSubmit, initialData = {} }) {
           </Form.Label>
           <div className="col-12 col-md-8">
             <Form.Control
+              as="textarea"
+              rows={4}
               id="comment"
-              type="text"
               name="comment"
               value={formData.comment}
               onChange={handleChange}
-              placeholder="your comment"
+              placeholder="Write your comment..."
               className="form-control"
               ref={inputRef}
             />
@@ -90,7 +91,7 @@ function ReviewForm({ onSubmit, initialData = {} }) {
               name="type"
               value={formData.type}
               onChange={handleChange}
-              className="form-control"
+              className="custom-select"
             >
               <option value="">Select Type</option>
               <option value="dine-in">Dine-in</option>
@@ -111,7 +112,7 @@ function ReviewForm({ onSubmit, initialData = {} }) {
               name="rate"
               value={formData.rate}
               onChange={handleChange}
-              className="form-control"
+              className="custom-select"
             >
               <option value="">Select rating</option>
               <option value="1">1 - Poor</option>

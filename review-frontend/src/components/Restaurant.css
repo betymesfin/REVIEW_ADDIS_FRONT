@@ -1,6 +1,5 @@
 .card {
-    /* display: flex; 
-    flex-wrap: wrap; */
+    
     gap: 0.875em;
     align-items: flex-start;
     padding: 1.875em;
@@ -16,11 +15,7 @@
     overflow: hidden;
 }
 
-/* .card:hover {
-    transform: scale(1.1) rotate(-1deg);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    transition: all 200ms ease-in-out;
-} */
+
 .slider-container {
     position: relative;
     width: 98%;
@@ -45,12 +40,7 @@
         padding: 10px;
         border-radius: 50%;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-/* .arrow:hover {
-    transform: scale(1.1) rotate(-1deg);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    transition: all 200ms ease-in-out;
-} */
+}
 .arrow.left {
     left: 10px;
 }
@@ -58,11 +48,7 @@
 .arrow.right {
     right: 20px;     }
 
-/* .card-slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;     } */
+
 
 
 .buttons-container {
@@ -92,7 +78,7 @@ transition: all 200ms ease-in-out
 
 .image-carousel {
     position: relative;
-    /* width: 80%; */
+    
     height: 300px;
     margin-bottom: 1rem;
     overflow: hidden;
